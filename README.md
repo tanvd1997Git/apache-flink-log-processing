@@ -63,7 +63,7 @@ cd docker && docker-compose up -d
 * _log-processing-output_: Store output of log processing
 ```
 ### Access container terminal 
-docker exec -it 2628679c7f1d182510964503425b6ea491cd66766f5171ffcb1c86ba430e3bfc /bin/bash
+docker exec -it <input-container-id> /bin/bash
 ### Create topic
 opt/kafka/bin/kafka-topics.sh --create --topic log-event --bootstrap-server localhost:9092
 opt/kafka/bin/kafka-topics.sh --create --topic log-processing-output --bootstrap-server localhost:9092
@@ -98,7 +98,7 @@ Monitor a running job
 **7. Monitor output on _log-processing-output_ topic**
 ```
 ### Access container terminal 
-docker exec -it 2628679c7f1d182510964503425b6ea491cd66766f5171ffcb1c86ba430e3bfc /bin/bash
+docker exec -it <input-container-id> /bin/bash
 ### Monitor output data
 opt/kafka/bin/kafka-console-consumer.sh --topic log-processing-output --bootstrap-server localhost:9092
 ```
