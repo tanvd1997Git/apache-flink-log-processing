@@ -1,0 +1,4 @@
+rootProject.name = 'apache-flink-log-processing'
+
+include 'services:flink-job'
+include 'services:log-generator'
